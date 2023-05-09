@@ -6,14 +6,14 @@ class Coffee_Decorator : public DrinkDecorator
 	void drink_preparing(std::string const& drink_name, int const& cup_size, unsigned const& sugar_quantity) const override
 	{
 		DrinkDecorator::drink_preparing;
-		std::cout << "Âàøå çàìîâëåííÿ: \n" << drink_name << " îá'ºìîì " << cup_size << " ³ç " << " ëîæêàìè öóêðó.\n";
+		std::cout << "Ваше замовлення: \n" << drink_name << " об'ємом " << cup_size << " із " << " ложками цукру.\n";
 		double total_price{ Drink::drink_price(cup_size, sugar_quantity) };
-		std::cout << "Ç âàñ " << total_price << " ãðèâåíü" << std::endl;
-		std::cout << "Îö³í³òü âàø³ âðàæåííÿ â³ä 1 äî 10" << std::endl;
+		std::cout << "З вас " << total_price << " гривень" << std::endl;
+		std::cout << "Оцініть ваші враження від 1 до 10" << std::endl;
 		unsigned int rating{};
 		std::cin >> rating;
-		std::cout << std::endl << "Äÿêóþºìî, ùî äîïîìàãàºòå íàì ñòàâàòè êðàùå!" << std::endl;
-		std::cout << "Íà îñòàíîê, ïðîïîíóºìî äî â³äîìîñò³ 3 ö³êàâèõ ôàêòè ïðî êàâó" << std::endl;
+		std::cout << std::endl << "Дякуюємо, що допомагаєте нам ставати краще!" << std::endl;
+		std::cout << "На останок, пропонуємо до відомості 3 цікавих факти про каву" << std::endl;
 		std::this_thread::sleep_for(std::chrono::seconds(3));
 		std::cout << "1) Напій з'явився ще у 800 році нашої ери.\n Легенда свідчить, що у 9 столітті пастухи-козопаси помітили вплив кофеїну на своїх кіз, \n"
 			<< "які ніби танцювали після того, як з'їдали плоди кавової рослини Coffea. Місцевий монах приготував напій з цих плодів і виявив, що він \n"

@@ -25,7 +25,7 @@ public:
     }
     void sugar_adding(unsigned const& sugar_quantity) const override
     {
-        return m_drink->sugar_adding(sugar_quantity);
+        m_drink->sugar_adding(sugar_quantity);
         std::cout << "÷укор додано!" << std::endl;
     }
 };

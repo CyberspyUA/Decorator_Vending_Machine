@@ -8,7 +8,7 @@ class Tea_Decorator : public DrinkDecorator
 		DrinkDecorator::drink_preparing;
 		std::cout << "Ваше замовлення: \n" << drink_name << " об'ємом " << cup_size << " із " << " ложками цукру.\n";
 		double total_price{ Drink::drink_price(cup_size, sugar_quantity) };
-		std::cout << "З вас " << total_price << std::endl;
+		std::cout << "З вас " << total_price << " гривень" << std::endl;
 		std::cout << "Оцініть ваші враження від 1 до 10" << std::endl;
 		unsigned int rating{};
 		std::cin >> rating;
