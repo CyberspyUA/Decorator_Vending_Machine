@@ -1,11 +1,28 @@
 #pragma once
-#include "Drink.h"
+#include "Cacao.h"
+#include "Tea.h"
+#include "Coffee.h"
 #include <string>
 class VendingMachine {
 public:
-	void makeDrink(std::string const& name, int const& cup_size, int const& sugar_spoons) const {
-		Drink const* drink = Drink::getInstance();
-		drink->prepare(name, cup_size, sugar_spoons);
+	void makeDrink(std::string const& name, int const& cup_size, int const& sugar_spoons, int const& drink_choice) const {
+		if (drink_choice == 1)
+		{
+			std::shared_ptr<Drink> coffee = std::make_shared<Coffee>();
+			coffee->drink_preparing(name, cup_size, sugar_spoons);
+		}
+			
+		
+		else if (drink_choice == 2)
+		{
+			std::shared_ptr<Drink> tea = std::make_shared<Tea>();
+		}
+			
+		else if (drink_choice == 3)
+		{
+			std::shared_ptr<Drink> cacao = std::make_shared<Cacao>();
+		}
+			
 	}
 	bool sugar_suggestion() const
 	{
