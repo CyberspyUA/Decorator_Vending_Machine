@@ -131,10 +131,14 @@
     <ClCompile Include="Decorator_Vending_Machine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="H_Files\Basic_Decorator.h" />
     <ClInclude Include="H_Files\Cacao.h" />
+    <ClInclude Include="H_Files\Cacao_Decorator.h" />
     <ClInclude Include="H_Files\Coffee.h" />
+    <ClInclude Include="H_Files\Coffee_Decorator.h" />
     <ClInclude Include="H_Files\Drink.h" />
     <ClInclude Include="H_Files\Tea.h" />
+    <ClInclude Include="H_Files\Tea_Decorator.h" />
     <ClInclude Include="H_Files\Vending_Machine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
