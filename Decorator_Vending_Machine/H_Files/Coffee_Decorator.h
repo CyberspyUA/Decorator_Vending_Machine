@@ -13,5 +13,8 @@ class Coffee_Decorator : public DrinkDecorator
 		unsigned int rating{};
 		std::cin >> rating;
 		std::cout << std::endl << "Дякуюємо, що допомагаєте нам ставати краще!" << std::endl;
+		std::cout << "На останок, пропонуємо до відомості 3 цікавих факти про каву" << std::endl;
+		std::this_thread::sleep_for(std::chrono::seconds(3));
+
 	}
 };
