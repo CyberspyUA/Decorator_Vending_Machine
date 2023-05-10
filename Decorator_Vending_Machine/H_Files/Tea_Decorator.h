@@ -29,6 +29,7 @@ public:
 	}
 	double drink_price(int const& cup_size, unsigned int const& sugar_quantity) const override
 	{
-		return 20.0 + (cup_size / 100) + sugar_quantity;
+		auto cup_size_ = static_cast<double>(cup_size);
+		return 20.0 + (cup_size_ / 100) + sugar_quantity;
 	}
 };
