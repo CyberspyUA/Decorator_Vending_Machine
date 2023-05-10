@@ -2,6 +2,9 @@
 #include "Cacao.h"
 #include "Tea.h"
 #include "Coffee.h"
+#include "Coffee_Decorator.h"
+#include "Tea_Decorator.h"
+#include "Cacao_Decorator.h"
 #include <string>
 class VendingMachine {
 public:
@@ -9,18 +12,25 @@ public:
 		if (drink_choice == 1)
 		{
 			std::shared_ptr<Drink> coffee = std::make_shared<Coffee>();
+			coffee = std::make_shared<Coffee_Decorator>(coffee);
 			coffee->drink_preparing(name, cup_size, sugar_spoons);
+			return;
 		}
-			
-		
+
 		else if (drink_choice == 2)
 		{
 			std::shared_ptr<Drink> tea = std::make_shared<Tea>();
+			tea = std::make_shared<Tea_Decorator>(tea);
+			tea->drink_preparing(name, cup_size, sugar_spoons);
+			return;
 		}
 			
 		else if (drink_choice == 3)
 		{
 			std::shared_ptr<Drink> cacao = std::make_shared<Cacao>();
+			cacao = std::make_shared<Cacao_Decorator>(cacao);
+			cacao->drink_preparing(name, cup_size, sugar_spoons);
+			return;
 		}
 			
 	}

@@ -7,7 +7,7 @@ private:
 public:
     explicit DrinkDecorator(std::shared_ptr<Drink> drink) : m_drink(drink) {};
 
-    void drink_preparing(std::string const& drink_name, int const& cup_size, unsigned const& sugar_quantity) const override
+    void drink_preparing(std::string const& drink_name, int const& cup_size, unsigned int const& sugar_quantity) const override
     {
         m_drink->drink_preparing(drink_name, cup_size, sugar_quantity);
     }
@@ -21,11 +21,16 @@ public:
     void placing_the_cup(int const& cup_size) const override
     {
         m_drink->placing_the_cup(cup_size);
-        std::cout << "Наливаю напій у стакан розміром " << cup_size << std::endl;
+        std::cout << "Наливаю напiй у стакан розмiром " << cup_size << std::endl;
     }
     void sugar_adding(unsigned const& sugar_quantity) const override
     {
         m_drink->sugar_adding(sugar_quantity);
         std::cout << "Цукор додано!" << std::endl;
+    }
+    double sugar_price(unsigned int const& sugar_quantity) const override
+    {
+        auto sugar_price = static_cast<double>(sugar_quantity);
+        return sugar_price;
     }
 };

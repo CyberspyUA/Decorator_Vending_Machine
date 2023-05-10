@@ -7,7 +7,7 @@ public:
 		if (sugar_spoons > 0)
 			sugar_adding(sugar_spoons);
 		placing_the_cup(cup_size);
-		std::cout << "Напій готовий!" << std::endl;
+		std::cout << "Напiй готовий!" << std::endl;
 	}
 	void boiling(std::string const& name) const override
 	{
@@ -17,7 +17,7 @@ public:
 		std::this_thread::sleep_for(std::chrono::seconds(5));
 		std::cout << "Кип'ячу молоко..." << std::endl;
 		std::this_thread::sleep_for(std::chrono::seconds(5));
-		std::cout << "Перемішую інгредієнти..." << std::endl;
+		std::cout << "Перемiшую iнгредiєнти..." << std::endl;
 		std::this_thread::sleep_for(std::chrono::seconds(5));
 	}
 	void sugar_adding(unsigned const& sugar_spoons_quantity) const override
@@ -41,42 +41,33 @@ public:
 		}
 		else if (cup_size == 200)
 		{
-			cup_price = 1.5;
+			cup_price = 2.0;
 			sugar_price_ = sugar_price(sugar_spoons);
 			return 30.0 + cup_price + sugar_price_;
 		}
 		else if (cup_size == 300)
 		{
-			cup_price = 2.0;
+			cup_price = 3.0;
 			sugar_price_ = sugar_price(sugar_spoons);
 			return 30.0 + cup_price + sugar_price_;
 		}
 		else if (cup_size == 400)
 		{
-			cup_price = 2.5;
+			cup_price = 4.0;
 			sugar_price_ = sugar_price(sugar_spoons);
 			return 30.0 + cup_price + sugar_price_;
 		}
 		else if (cup_size == 500)
 		{
-			cup_price = 3.0;
+			cup_price = 5.0;
 			sugar_price_ = sugar_price(sugar_spoons);
 			return 30.0 + cup_price + sugar_price_;
 		}
+		else return 30.0;
 	}
 	double sugar_price(unsigned int const& sugar_spoons) const override
 	{
-		double sugar_price{};
-		if (sugar_spoons == 0)
-			return sugar_price;
-		else
-		{
-			unsigned int sugar_spoons_copy{ sugar_spoons };
-			while (sugar_spoons_copy != 0)
-			{
-				sugar_price++;
-				sugar_spoons_copy--;
-			}
-		}
+		auto sugar_price = static_cast<double>(sugar_spoons);
+		return sugar_price;
 	}
 };

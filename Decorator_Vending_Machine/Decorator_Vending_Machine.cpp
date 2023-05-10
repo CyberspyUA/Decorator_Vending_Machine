@@ -3,9 +3,6 @@
 #include <memory>
 #include "H_Files/Vending_Machine.h"
 
-Drink* Drink::instance = nullptr;
-
-
 int main() {
     VendingMachine vendingMachine;
     setlocale(0, ".1251");
@@ -44,7 +41,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                     else if (coffee_choice == 2)
@@ -58,7 +55,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                     else if (coffee_choice == 3)
@@ -73,7 +70,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                 }
@@ -93,7 +90,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                     else if (tea_choice == 2)
@@ -107,7 +104,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                     else if (tea_choice == 3)
@@ -122,7 +119,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                 }
@@ -142,7 +139,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                     else if (cacao_choice == 2)
@@ -156,7 +153,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                     else if (cacao_choice == 3)
@@ -171,7 +168,7 @@ int main() {
                             spoons_quantity = vendingMachine.sugar_adding();
                         }
                         int cup_size{ vendingMachine.cup_suggestion() };
-                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity);
+                        vendingMachine.makeDrink(drink_name, cup_size, spoons_quantity, drink_choice);
                         terminate_program = true;
                     }
                 }
